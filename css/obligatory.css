@@ -1,0 +1,34 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-link {
+	display: flex;
+	align-items: center;
+	height: var(--input-height);
+	font-size: 20px;
+	padding: 0 20px;
+	border-radius: var(--input-radius);
+	box-shadow: 0 var(--input-shadow) 0 0 var(--primary2);
+	color: black;
+	background: var(--primary1);
+	text-decoration: none;
+	transition: all 0.15s;
+	box-sizing: border-box;
+}
+.card-link:hover {
+	box-shadow: 0 var(--hover-shadow) 0 0 var(--primary2);
+	transform: translateY(calc(var(--input-shadow) - var(--hover-shadow)));
+}
+.card-link:active {
+	box-shadow: 0 0 0 0 var(--primary2);
+	transform: translateY(var(--input-shadow));
+}
+.card-link svg {
+	font-size: 24px;
+	margin-right: var(--icon-margin);
+}
+.card-link + .card-link {margin-top: 15px;}

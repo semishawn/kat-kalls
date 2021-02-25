@@ -1,0 +1,27 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	--input-height: 50px;
+	--input-padding: 20px;
+	--input-radius: 7px;
+	--input-shadow: 6px;
+	--hover-shadow: 3px;
+	--input-duration: 0.5s;
+	--icon-margin: 8px;
+	--primary1: white;
+	--primary2: #eee;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #00f3;
+	box-sizing: border-box;
+}
+
+* {
+	font-family: 'Balsamiq Sans', sans-serif;
+	font-size: 20px;
+}

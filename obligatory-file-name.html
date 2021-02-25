@@ -1,0 +1,36 @@
+---
+title: Card List
+cards: [
+	{
+		name: "valentine's day",
+		slug: "valentine"
+	},
+	{
+		name: "st. patrick's day",
+		slug: "st-patrick"
+	},
+	{
+		name: "christmas",
+		slug: "christmas"
+	}
+]
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	{% include head.html %}
+	<link rel="stylesheet" href="css/obligatory.css">
+</head>
+
+<body>
+	{%- for card in page.cards %}
+	<a class="card-link" href="cards/{{ card.slug }}">
+		<i class="fas fa-envelope-open-text"></i>
+		{{ card.name }}
+	</a>
+	{%- endfor %}
+</body>
+
+</html>

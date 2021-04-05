@@ -11,25 +11,30 @@ title: Kat Kalls
 </head>
 
 <body>
-	<span class="password-title">what's da password?</span>
-	<div class="password-input-container">
+	<span class="adgangskode-title">what's da password?</span>
+	<div class="adgangskode-input-container">
 		<i class="fas fa-lock"></i>
 		<i class="fas fa-lock-open"></i>
-		<input class="password-box" type="text" placeholder="put da password here...">
+		<input class="adgangskode-box" type="text" placeholder="put da password here...">
 	</div>
-	<button class="password-btn">try da password</button>
+	<button class="btn">try da password</button>
 
 	<script>
-		$('.password-btn').click(function() {
-			var box = $('.password-input-container')
-			var input = $('.password-box').val();
-			var password = 'aW5zdGFudCBwZWEgc291cA==';
+		$(window).keypress(function(e) {
+			if (e.which == 13) $('.btn').click();
+		});
+		
+		$('.btn').click(function() {
+			var box = $('.adgangskode-input-container')
+			var input = $('.adgangskode-box').val();
+			var adgangskode = 'aW5zdGFudCBwZWEgc291cA==';
 			var duration = parseFloat($('body').css('--input-duration')) * 1000;
-			if (input == window.atob(password)) {
+			if (input == window.atob(adgangskode)) {
 				box.addClass('right');
 				setTimeout(function() {
-					window.location.href = 'obligatory-file-name';
+					window.location.href = 'all-cards';
 				}, duration);
+				sessionStorage.setItem('adgangskode', true);
 			} else {
 				box.addClass('wrong');
 				setTimeout(function() {

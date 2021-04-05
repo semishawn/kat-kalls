@@ -5,13 +5,13 @@ body {
 	align-items: center;
 }
 
-.password-input-container {
+.adgangskode-input-container {
 	--icon-size: 25px;
 	position: relative;
 	margin-top: 10px;
 	margin-bottom: 15px;
 }
-.password-input-container:before {
+.adgangskode-input-container:before {
 	position: absolute;
 	content: '';
 	height: calc(100% + var(--input-shadow));
@@ -23,7 +23,7 @@ body {
 	z-index: 999;
 }
 
-.password-box {
+.adgangskode-box {
 	height: var(--input-height);
 	width: 300px;
 	padding-left: var(--input-padding);
@@ -39,9 +39,9 @@ body {
 	transition: all 0.15s;
 	box-sizing: border-box;
 }
-.password-box::placeholder {color: #888;}
+.adgangskode-box::placeholder {color: #888;}
 
-.password-input-container svg {
+.adgangskode-input-container svg {
 	position: absolute;
 	top: 50%;
 	right: var(--input-padding);
@@ -49,29 +49,6 @@ body {
 	transform: translateY(-50%);
 }
 .fa-lock-open {display: none;}
-
-.password-btn {
-	height: var(--input-height);
-	padding: 0 20px;
-	border: 0;
-	border-radius: var(--input-radius);
-	outline: 0;
-	box-shadow: 0 var(--input-shadow) 0 0 var(--primary2);
-	color: black;
-	background: var(--primary1);
-	text-decoration: none;
-	transition: all 0.15s;
-	cursor: pointer;
-	box-sizing: border-box;
-}
-.password-btn:hover {
-	box-shadow: 0 var(--hover-shadow) 0 0 var(--primary2);
-	transform: translateY(calc(var(--input-shadow) - var(--hover-shadow)));
-}
-.password-btn:active {
-	box-shadow: 0 0 0 0 var(--primary2);
-	transform: translateY(var(--input-shadow));
-}
 
 .right {animation: correct var(--input-duration) linear;}
 .right:before {

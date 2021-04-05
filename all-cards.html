@@ -4,6 +4,14 @@ cards: [
 	{
 		name: "valentine's day",
 		slug: "valentine"
+	},
+	{
+		name: "national goof off day",
+		slug: "goof-off"
+	},
+	{
+		name: "kat's 17th birthday",
+		slug: "birthday"
 	}
 ]
 ---
@@ -13,16 +21,18 @@ cards: [
 
 <head>
 	{% include head.html %}
-	<link rel="stylesheet" href="css/obligatory.css">
+	<link rel="stylesheet" href="css/all-cards.css">
 </head>
 
-<body>
+<body class="hide">
 	{%- for card in page.cards %}
-	<a class="card-link" href="cards/{{ card.slug }}">
+	<a class="btn" href="cards/{{ card.slug }}">
 		<i class="fas fa-envelope-open-text"></i>
 		{{ card.name }}
 	</a>
 	{%- endfor %}
+
+	{% include adgangskode-check.html %}
 </body>
 
 </html>
